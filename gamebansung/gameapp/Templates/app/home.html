@@ -1,0 +1,62 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    {% comment %} css {% endcomment %}
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}" />
+    {% comment %} js {% endcomment %}
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="icon" href="{% static 'app/image/icon.png' %}" />
+    <title>Game sinh tồn</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <!-- Tiêu đề và các nút được căn giữa -->
+    <div
+      class="main-container"
+      style="
+        background: url('{% static 'app/image/background.jpg' %}') no-repeat
+          center center fixed;
+        height: 100vh;
+        background-size: cover;
+        width: 100vw;
+      "
+    >
+      <div class="game-title-container">
+        <h1 class="game-title">
+          SÁT THỦ ĐƯỜNG <br />
+          PHỐ 3
+        </h1>
+      </div>
+
+      <div class="controls-container">
+        <div class="play-button">▶</div>
+        <button class="btn upgrade-button">NÂNG CẤP</button>
+      </div>
+
+      <!-- Điều khiển âm thanh -->
+      <div class="audio-controls">
+        <button id="music-toggle" class="btn audio-btn" title="Tắt/Bật nhạc">
+          🎵
+        </button>
+        <button
+          id="sound-toggle"
+          class="btn audio-btn"
+          title="Tắt/Bật âm thanh"
+        >
+          🔊
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="{% static 'app/js/game.js' %}"></script>
+</html>

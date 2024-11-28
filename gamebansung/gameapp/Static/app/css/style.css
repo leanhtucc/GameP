@@ -1,0 +1,96 @@
+/* Reset một số kiểu mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    background: url("{% static 'app/image/background.jpg'}") no-repeat center center fixed;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* Container chính để căn giữa tất cả các phần tử */
+.main-container {
+    text-align: center; /* Căn giữa theo chiều ngang */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px; /* Khoảng cách giữa các phần tử */
+  }
+  
+  /* Căn giữa tiêu đề game */
+  .game-title-container h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #d32f2f; /* Màu đỏ */
+  }
+  
+  /* Định dạng cho nút chơi và nút nâng cấp */
+  .controls-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* Khoảng cách giữa nút chơi và nút nâng cấp */
+  }
+  
+  /* Nút chơi */
+  .play-button {
+    background-color: #f1c40f;
+    color: white;
+    font-size: 2rem;
+    padding: 10px 20px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .play-button:hover {
+    background-color: #f39c12;
+  }
+  
+  /* Nút nâng cấp */
+  .upgrade-button {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upgrade-button:hover {
+    background-color: #2ecc71;
+  }
+  
+  .audio-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+.audio-btn {
+    background-color: #FFD700;
+    border: none;
+    color: #000;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.3s;
+}
+.audio-btn:hover {
+    transform: scale(1.1);
+    background-color: #FFA500;
+}
